@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article: Tech Blog</title>
+</head>
+
+<body>
+    <header>
+        <h2>TechNova</h2>
+        <nav>
+            <ul>
+                <li><img src="../Attachments/Home-Icon.png" alt="Home-Icon" width="20px"><a href="#">Home</a></li>
+                <li><img src="../Attachments/Articles-Icon.png" alt="Articles-Icon" width="20px"><a
+                        href="#">Articles</a></li>
+                <li><img src="../Attachments/Tutorials-Icon.png" alt="Tutorials-Icon" width="20px"><a
+                        href="#">Tutorials</a></li>
+                <li><img src="../Attachments/About-Icon.png" alt="About-Icon" width="20px"><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <article>
+            <section class="about">
+                <h1>Understanding How the Web Works</h1>
+                <ul>
+                    <li><strong>Author:</strong> Ritam Das</li>
+                    <li><strong>Published:</strong> August 1, 2026</li>
+                    <li><strong>Category:</strong> Web Development</li>
+                    <li><strong>Reading time:</strong> 8 minutes</li>
+                </ul>
+            </section>
+            <hr>
+            <section class="intro">
+                <h2>Introduction</h2>
+                <p>Whenever you open a website, the experience feels almost instantaneous. You type an address into the
+                    browser, press Enter, and within a moment the requested page appears on your screen. It is easy to
+                    think of this as a single action, but several different systems are working together behind the
+                    scenes.</p>
+
+                <p>The browser has to identify the resource you requested, communicate with another computer over a
+                    network, receive a response, interpret the returned information, and finally construct the page you
+                    see. Servers, networks, protocols, browsers, and web technologies all play different roles in this
+                    process.</p>
+
+                <p>For anyone learning web development, understanding these fundamentals is important. You do not need
+                    to become a network engineer to build websites, but knowing what happens between clicking a link and
+                    seeing a webpage will give you a much clearer mental model of how the web actually works.</p>
+            </section>
+            <hr>
+            <section class="about-internet">
+                <h2>1. What Is the Internet?</h2>
+                <p>The Internet is a global network of interconnected computer networks. It connects billions of devices
+                    across the world and allows those devices to exchange information with one another.</p>
+
+                <p>Your laptop, smartphone, a university server, a cloud server, and a data center can all communicate
+                    through this network. The Internet itself is not one single machine or one single network owned by
+                    one organization. It is a collection of networks connected together using common communication
+                    standards.</p>
+
+                <p>When you send information across the Internet, that information can travel through multiple networks
+                    and devices before reaching its destination. Routers help determine where network traffic should go,
+                    while different protocols define how devices communicate and exchange data.</p>
+
+                <p>This infrastructure is what makes services such as websites, email, online gaming, video streaming,
+                    and cloud applications possible.</p>
+            </section>
+            <hr>
+            <section class="about-www">
+                <h2>2. What Is the World Wide Web?</h2>
+                <p>The World Wide Web, commonly called the Web, is a system that operates on top of the Internet.</p>
+
+                <p>The two terms are often used interchangeably in everyday conversation, but they are not the same
+                    thing. The Internet provides the underlying network infrastructure, while the Web is one of the
+                    services that uses that infrastructure.</p>
+
+                <p>Websites and web applications are accessed through browsers such as Chrome, Firefox, Safari, and
+                    Edge. These browsers communicate with web servers and retrieve resources such as HTML documents,
+                    stylesheets, images, videos, and JavaScript files.</p>
+
+                <p>Modern websites can be extremely complex, but at their foundation they still rely heavily on a few
+                    fundamental technologies.</p>
+            </section>
+            <hr>
+            <section class="about-webtechs">
+                <h2>3. The Three Core Web Technologies</h2>
+
+                <h3>HTML</h3>
+                <p>HTML, or HyperText Markup Language, defines the structure and meaning of content on a webpage.</p>
+
+                <p>Headings, paragraphs, lists, links, images, tables, forms, and many other parts of a webpage can be
+                    represented using HTML.</p>
+
+                <p>HTML is not primarily responsible for making a webpage visually attractive. Its main job is to
+                    describe what the content is and how different pieces of content are related.</p>
+
+                <h3>CSS</h3>
+                <p>CSS, or Cascading Style Sheets, controls the presentation of a webpage.</p>
+
+                <p>It can be used to change colors, typography, spacing, layouts, borders, backgrounds, animations, and
+                    many other visual properties.</p>
+
+                <p>A useful way to think about the relationship is that HTML describes the structure of the page, while
+                    CSS controls how that structure is presented to the user.</p>
+
+                <h3>JavaScript</h3>
+                <p>JavaScript is a programming language commonly used to add behavior and interactivity to webpages.</p>
+
+                <p>For example, JavaScript can respond to user actions, validate form input, update content without
+                    reloading an entire page, communicate with APIs, create interactive interfaces, and control
+                    application logic.</p>
+
+                <p>Together, HTML, CSS, and JavaScript form the foundation of modern front-end web development.</p>
+
+            </section>
+            <hr>
+            <section class="request-web">
+                <h2>4. What Happens When You Request a Webpage?</h2>
+
+                <p>Suppose you enter the following address into your browser:</p>
+                <a href="#">https://technova.example/articles/how-the-web-works</a>
+
+                <p>The browser needs to determine which server should handle the request and then communicate with that
+                    server.</p>
+
+                <p>The browser sends a request for the required resource. The server receives the request, determines
+                    what should be returned, and sends a response back to the browser.</p>
+
+                <p>That response might contain an HTML document. The browser reads that document and discovers that the
+                    page may also require additional resources such as CSS files, JavaScript files, images, fonts, or
+                    other data.</p>
+
+                <p>The browser can then request those resources as well.</p>
+
+                <p>After receiving the necessary resources, the browser processes them and constructs the webpage that
+                    is ultimately displayed to the user.</p>
+
+                <p>Although this process involves many technical details, the basic idea is straightforward:</p>
+                <b>Browser → Request → Server → Response → Browser → Rendered Page</b>
+            </section>
+            <hr>
+            <section class="http-s">
+                <h2>Important Information</h2>
+
+                <b>HTTP and HTTPS</b>
+
+                <p>Web browsers and web servers commonly communicate using HTTP-based protocols.</p>
+
+                <p>HTTP stands for Hypertext Transfer Protocol. HTTPS is the secure version of HTTP, where the
+                    communication is protected using encryption through TLS.</p>
+
+                <p>When you visit a website using an HTTPS address, the connection helps protect information exchanged
+                    between the browser and server from being read or modified by unauthorized parties while it travels
+                    across the network.</p>
+
+            </section>
+            <hr>
+            <section class="about-webserver">
+                <h2>5. What Is a Web Server?</h2>
+
+                <p>A web server is a computer system or software system responsible for handling requests for web
+                    resources.</p>
+
+                <p>When a browser requests a webpage, the server receives that request and determines how to respond.
+                </p>
+
+                <p>A server might return a static HTML file, generate a response dynamically, retrieve information from
+                    a database, or perform some combination of these operations.</p>
+
+                <p>For example, a simple personal website might return a collection of HTML, CSS, JavaScript, and image
+                    files directly. A large web application may instead process the request through application code,
+                    retrieve information from a database, and generate a response specifically for that user.</p>
+
+                <p>This is one reason why modern web development involves much more than simply writing HTML files.</p>
+
+            </section>
+            <hr>
+            <section class="web-distinguish">
+                <h2>6. Static Websites and Web Applications</h2>
+
+                <p>A static website generally serves files whose content does not change for each individual request.
+                </p>
+
+                <p>A simple portfolio or documentation website can often be built this way. The browser requests a
+                    particular HTML document, and the server returns that document.</p>
+
+                <p>Web applications are usually more dynamic.</p>
+
+                <p>Consider an online shopping website. When you open your account, view your cart, search for a
+                    product, or place an order, the application may need to retrieve information from databases and
+                    process your request before returning the appropriate response.</p>
+
+                <p>The browser is still involved, but there is much more happening between the user's action and the
+                    final result.</p>
+
+            </section>
+            <hr>
+            <section class="concepts">
+                <h2>7. Why Understanding These Concepts Matters</h2>
+
+                <p>Learning individual HTML elements is necessary, but memorizing tags is not enough to become a good
+                    web developer.</p>
+
+                <p>You should gradually develop an understanding of how the different pieces fit together.</p>
+
+                <p>HTML gives content structure. CSS controls presentation. JavaScript provides behavior. Servers handle
+                    requests and responses. Databases can store application data. APIs allow different software systems
+                    to communicate.</p>
+
+                <p>Once these relationships become clear, technologies that initially seem unrelated start fitting into
+                    a larger picture.</p>
+
+                <p>That understanding becomes especially useful when you begin working with front-end frameworks,
+                    back-end systems, REST APIs, authentication, databases, and deployment.</p>
+
+            </section>
+            <hr>
+            <section class="takeaways">
+                <h2>Key Takeaways</h2>
+                <p>By the end of this article, a beginner should understand these basic points:</p>
+                <ul>
+                    <li>The Internet is a global network of interconnected networks.</li>
+                    <li>The Web is a service that operates over the Internet.</li>
+                    <li>Web browsers communicate with servers to retrieve web resources.</li>
+                    <li>HTML provides webpage structure and meaning.</li>
+                    <li>CSS controls presentation and visual appearance.</li>
+                    <li>JavaScript adds behavior and interactivity.</li>
+                    <li>HTTP and HTTPS are commonly used for communication between browsers and web servers.</li>
+                    <li>Websites can be static or dynamic.</li>
+                    <li>Modern web applications can involve browsers, servers, APIs, databases, and many other
+                        components.</li>
+                </ul>
+            </section>
+            <hr>
+            <aside>
+                <h2>Related Articles</h2>
+
+                <strong>How HTML Works</strong>
+                <a href="#">https://technova.example/articles/how-html-works</a>
+                <p>A beginner-friendly explanation of how HTML documents are structured and interpreted by browsers.</p>
+                <br>
+
+                <strong>Introduction to HTTP</strong>
+                <a href="#">https://technova.example/articles/introduction-to-http</a>
+                <p>Learn about requests, responses, methods, status codes, headers, and the role of HTTP in web
+                    communication.</p>
+                <br>
+
+                <strong>Browser Rendering Explained</strong>
+                <a href="#">https://technova.example/articles/browser-rendering</a>
+                <p>An introduction to what happens inside a browser after it receives an HTML document.</p>
+                <br>
+
+                <strong>From HTML to Full-Stack Development</strong>
+                <a href="#">https://technova.example/articles/html-to-full-stack</a>
+                <p>A roadmap explaining how HTML connects to CSS, JavaScript, back-end development, databases, APIs, and
+                    deployment.</p>
+
+            </aside>
+            <hr>
+            <section class="about-author">
+                <h2>About the Author</h2>
+                <h3>Ritam Das</h3>
+                <p>Ritam Das is a frontend developer and technical writer who enjoys explaining complicated web
+                    technologies through practical examples. His writing focuses on browsers, web standards, frontend
+                    development, and the underlying systems that make websites work.</p>
+                <p>Outside of writing, he spends his time building small web applications and experimenting with
+                    different development tools.</p>
+            </section>
+        </article>
+    </main>
+    <hr>
+    <footer>
+        <h4>TechNova</h4>
+        <p>Independent technology articles, tutorials, and practical guides for developers.</p>
+
+        <nav>
+            <label for="navigation">Navigation</label>
+            <ul id="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <label for="about-us">About Us</label>
+            <ul id="about-us">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <p><i>Copyright © 2026 TechNova. All rights reserved.</i></p>
+
+    </footer>
+
+</body>
+
+</html>

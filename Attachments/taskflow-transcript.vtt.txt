@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00.000 --> 00:05.000
+Welcome to TaskFlow!
+
+2
+00:05.500 --> 00:15.000
+TaskFlow is a lightweight, terminal-first productivity workflow for developers.
+
+3
+00:15.500 --> 00:30.000
+Learn how to manage, track, and execute project tasks from your command line.
+
+4
+00:30.500 --> 00:45.000
+To get started, clone the repository and run taskflow init.

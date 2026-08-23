@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Project Documentation</title>
+</head>
+
+<body>
+    <header>
+        <h1>⚡TaskFlow CLI</h1>
+        <h2>Organize your work. Stay focused. Ship consistently.</h2>
+        <p>TaskFlow CLI is a lightweight command-line productivity tool designed for developers and students who want to
+            manage personal tasks directly from the terminal.</p>
+        <p>Instead of opening a separate productivity application every time you want to record a task, TaskFlow allows
+            you to create, complete, prioritize, and review tasks directly from your command line.</p>
+        <p><strong>🟢 Public Beta</strong></p>
+        <p><strong>📦 Version: v0.8.0</strong></p>
+        <p><strong>📜 License: MIT License</strong></p>
+        <p><strong>🕒 Last updated: August 16, 2026</strong></p>
+        <figure>
+            <img src="../Attachments/TaskFlow-Banner.jpg"
+                alt="TaskFlow CLI running on a developer workstation with terminal commands and project information"
+                width="60%">
+            <figcaption>TaskFlow CLI — a lightweight productivity workflow for developers.</figcaption>
+        </figure>
+    </header>
+    <hr>
+    <main>
+        <section class="about">
+            <h2>🚀 What Is TaskFlow CLI?</h2>
+            <p>TaskFlow CLI was created for people who spend a significant amount of their day working inside a
+                terminal.</p>
+            <p>The project provides a simple way to manage tasks without switching repeatedly between a terminal,
+                browser, and separate productivity application.</p>
+            <p>A task can be created with a short command, assigned a priority, marked as completed, and reviewed later.
+            </p>
+            <p>The tool is intentionally lightweight and focuses on the essential features required for personal task
+                management.</p>
+            <p>TaskFlow is currently in public beta. The core task-management functionality is stable, while several
+                advanced features are still being developed.</p>
+        </section>
+        <hr>
+        <section class="why-taskflow">
+            <h2>💡 Why Was TaskFlow Created?</h2>
+            <dl>
+                <dt><strong>🔴 Problem</strong></dt>
+                <dd>Developers often keep temporary task lists in text files, terminal notes, messaging applications, or
+                    multiple productivity tools.</dd><br>
+                <dt><strong>🟡 Idea</strong></dt>
+                <dd>TaskFlow brings basic task management directly into the command-line environment.</dd><br>
+                <dt><strong>🟢 Goal</strong></dt>
+                <dd>The long-term goal is to create a fast, reliable, keyboard-friendly productivity tool that can be
+                    used without leaving the developer's workflow.</dd>
+            </dl>
+        </section>
+        <hr>
+        <section class="key-feats">
+            <h2>✨ Key Features</h2>
+            <p><strong>TaskFlow currently provides:</strong></p>
+            <ul>
+                <li>Create new tasks</li>
+                <li>View pending tasks</li>
+                <li>Mark tasks as completed</li>
+                <li>Assign task priorities</li>
+                <li>Filter tasks by priority</li>
+                <li>Search existing tasks</li>
+                <li>Add notes to tasks</li>
+                <li>Export tasks to a text file</li>
+                <li>Store tasks locally</li>
+                <li>Work without an Internet connection</li>
+            </ul>
+            <h3>🔮 Planned Features</h3>
+            <ul>
+                <li>Cloud synchronization</li>
+                <li>Team workspaces</li>
+                <li>Task sharing</li>
+                <li>Calendar integration</li>
+                <li>Mobile companion application</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="instaln-guide">
+            <h2>📦 Installation</h2>
+            <h3>System Requirements</h3>
+            <ul>
+                <li>Windows 11</li>
+                <li>macOS 13 or later</li>
+                <li>Ubuntu 22.04 or later</li>
+                <li>Node.js 20 or later</li>
+            </ul>
+            <h3>Installation</h3>
+            <p>The official installation process currently uses npm.</p>
+            <code><mark>npm install -g taskflow-cli</mark></code>
+            <h3>Verify Installation</h3>
+            <p>After installation:</p>
+            <code><mark>taskflow --version</mark></code>
+            <p>Expected output:</p>
+            <code><mark>TaskFlow CLI v0.8.0</mark></code>
+        </section>
+        <hr>
+        <section class="get-start">
+            <h2>🏁 Getting Started</h2>
+            <p><strong>Create your first task:</strong></p>
+            <code>taskflow add "Complete HTML practice task"</code>
+            <p><strong>Expected response:</strong></p>
+            <pre>
+Task created successfully.
+
+ID: 104
+Title: Complete HTML practice task
+Priority: Normal
+Status: Pending
+            </pre>
+            <p><strong>View your current tasks:</strong></p>
+            <code>taskflow list</code>
+            <p><strong>Expected output:</strong></p>
+            <pre>
+ID    Priority    Status       Task
+104   Normal      Pending      Complete HTML practice task
+105   High        Pending      Review JavaScript loops
+106   Low         Completed    Organize project files
+            </pre>
+        </section>
+        <hr>
+        <section class="commands">
+            <h2>🧰 Common Commands</h2>
+            <table border="2px" cellspacing="5px" cellpadding="20px" width="50%">
+                <thead>
+                    <tr>
+                        <th>Command</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>taskflow add "Task"</code></td>
+                        <td>Creates a new task</td>
+                    </tr>
+                    <tr>
+                        <td><code>taskflow list</code></td>
+                        <td>Displays pending tasks</td>
+                    </tr>
+                    <tr>
+                        <td><code>taskflow done 104</code></td>
+                        <td>Marks task 104 as completed</td>
+                    </tr>
+                    <tr>
+                        <td><code>taskflow delete 104</code></td>
+                        <td>Deletes task 104</td>
+                    </tr>
+                    <tr>
+                        <td><code>taskflow search "HTML"</code></td>
+                        <td>Searches tasks</td>
+                    </tr>
+                    <tr>
+                        <td><code>taskflow priority 104 high</code></td>
+                        <td>Changes task priority</td>
+                    </tr>
+                    <tr>
+                        <td><code>taskflow help</code></td>
+                        <td>Displays available commands</td>
+                    </tr>
+                    <tr>
+                        <td><code>taskflow --version</code></td>
+                        <td>Displays installed version</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+        <section class="key-srts">
+            <h2>⌨️ Keyboard Shortcuts</h2>
+            <p>TaskFlow provides keyboard shortcuts when running in interactive mode.</p>
+            <table border="2px" cellspacing="5px" cellpadding="20px" width="50%">
+                <thead>
+                    <tr>
+                        <th>Shortcut</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><kbd>Ctrl</kbd> + <kbd>N</kbd></td>
+                        <td>Create a new task</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>Ctrl</kbd> + <kbd>F</kbd></td>
+                        <td>Search tasks</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>Ctrl</kbd> + <kbd>D</kbd></td>
+                        <td>Mark selected task as completed</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>Ctrl</kbd> + <kbd>P</kbd></td>
+                        <td>Change task priority</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>Ctrl</kbd> + <kbd>Q</kbd></td>
+                        <td>Exit TaskFlow</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>↑</kbd> / <kbd>↓</kbd></td>
+                        <td>Move between tasks</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>Enter</kbd></td>
+                        <td>Open selected task</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p># Keyboard shortcuts are available only when TaskFlow is running in interactive mode. They are designed
+                to allow users to perform common actions without repeatedly typing commands.</p>
+        </section>
+        <hr>
+        <section class="terminology">
+            <h2>📖 Project Terminology</h2>
+            <dl>
+                <dt><strong>Task</strong></dt>
+                <dd>A single unit of work that can be tracked from creation to completion.</dd>
+                <br>
+
+                <dt><strong>Priority</strong></dt>
+                <dd>A value indicating the importance or urgency of a task.</dd>
+                <br>
+
+                <dt><strong>Workspace</strong></dt>
+                <dd>A collection of tasks belonging to a particular project or working environment.</dd>
+                <br>
+
+                <dt><strong>Interactive Mode</strong></dt>
+                <dd>A terminal interface where users can navigate and manage tasks using keyboard input.</dd>
+                <br>
+
+                <dt><strong>Local Storage</strong></dt>
+                <dd>The local data store used by TaskFlow to save tasks on the user's computer.</dd>
+                <br>
+
+                <dt><strong>Command</strong></dt>
+                <dd>An instruction entered into the terminal that tells TaskFlow to perform an operation.</dd>
+                <br>
+
+                <dt><strong>Project Repository</strong></dt>
+                <dd>The source-code repository containing the TaskFlow project.</dd>
+                <br>
+            </dl>
+        </section>
+        <hr>
+        <section class="progress">
+            <h2>📊 Development Progress</h2>
+            <p><mark>TaskFlow is still under active development.</mark></p>
+            <div class="progress-list">
+                <div>
+                    <label for="core-cli"><strong>Core CLI Functionality</strong></label><br>
+                    <progress id="core-cli" value="72" max="100">72%</progress><br>
+                    <span>72% complete</span>
+                </div>
+                <br>
+
+                <div>
+                    <label for="documentation"><strong>Documentation</strong></label><br>
+                    <progress id="documentation" value="85" max="100">85%</progress><br>
+                    <span>85% complete</span>
+                </div>
+                <br>
+                <div>
+                    <label for="cloud-sync"><strong>Cloud Synchronization</strong></label><br>
+                    <progress id="cloud-sync" value="25" max="100">25%</progress><br>
+                    <span>25% complete</span>
+                </div>
+                <br>
+                <div>
+                    <label for="team-collab"><strong>Team Collaboration</strong></label><br>
+                    <progress id="team-collab" value="10" max="100">10%</progress><br>
+                    <span>10% complete</span>
+                </div>
+                <br>
+                <div>
+                    <label for="mobile-companion"><strong>Mobile Companion</strong></label><br>
+                    <progress id="mobile-companion" value="5" max="100">5%</progress><br>
+                    <span>5% complete</span>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="roadmap">
+            <h2>🗺️ Project Roadmap</h2>
+            <table border="2px" cellspacing="5px" cellpadding="20px" width="50%">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Core CLI</td>
+                        <td>🟢 Stable</td>
+                    </tr>
+                    <tr>
+                        <td>Local task storage</td>
+                        <td>🟢 Stable</td>
+                    </tr>
+                    <tr>
+                        <td>Task search</td>
+                        <td>🟢 Stable</td>
+                    </tr>
+                    <tr>
+                        <td>Task export</td>
+                        <td>🟡 Beta</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud synchronization</td>
+                        <td>🔵 In Development</td>
+                    </tr>
+                    <tr>
+                        <td>Team collaboration</td>
+                        <td>🟣 Planned</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile application</td>
+                        <td>🟣 Planned</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+        <section class="history">
+            <h2>🏷️ Release History</h2>
+            <h3>v0.8.0 &mdash; August 16, 2026</h3>
+            <ul>
+                <li>Interactive terminal mode</li>
+                <li>Task search</li>
+                <li>Keyboard shortcuts</li>
+                <li>Improved task filtering</li>
+                <li>Better error messages</li>
+            </ul>
+            <h3>v0.7.0 &mdash; July 10, 2026</h3>
+            <ul>
+                <li>Task priorities</li>
+                <li>Local task storage</li>
+                <li>Task export</li>
+            </ul>
+            <h3>v0.6.0 &mdash; June 2, 2026</h3>
+            <ul>
+                <li>Basic task creation</li>
+                <li>Task completion</li>
+                <li>Task listing</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="statistics">
+            <h2>📈 Project Statistics</h2>
+            <p><strong>Current version:</strong> v0.8.0</p>
+            <p><strong>Contributors:</strong> 18</p>
+            <p><strong>Open issues:</strong> 27</p>
+            <p><strong>Closed issues:</strong> 143</p>
+            <p><strong>Latest release:</strong> <time datetime="2026-08-16">August 16, 2026</time></p>
+            <p><strong>First public release:</strong> <time datetime="2026-02-12">February 12, 2026</time></p>
+            <p><strong>Supported operating systems:</strong> 4</p>
+        </section>
+        <hr>
+        <section class="config">
+            <h2>⚙️ Configuration</h2>
+            <p><strong>TaskFlow projects use a configuration file called:</strong></p>
+            <code>devflow.config.json</code>
+            <p><strong>Example configuration:</strong></p>
+            <pre>
+{
+    "project": "my-project",
+    "port": 3000,
+    "environment": "development",
+    "database": "postgresql",
+    "testing": true
+}
+            </pre>
+            <p># The configuration file determines how TaskFlow initializes the development environment.</p>
+        </section>
+        <hr>
+        <section class="environment">
+            <h2>💻 Supported Environments</h2>
+            <h3>Operating Systems</h3>
+            <ul>
+                <li>Windows 11</li>
+                <li>macOS 13+</li>
+                <li>Ubuntu 22.04+</li>
+                <li>Other Linux distributions with compatible dependencies</li>
+            </ul>
+            <h3>Runtime</h3>
+            <p>Node.js 20 or later</p>
+            <h3>Package Managers</h3>
+            <ul>
+                <li>npm</li>
+                <li>pnpm</li>
+                <li>yarn</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="workflow">
+            <h2>🔄 Developer Workflow</h2>
+            <p>A typical TaskFlow development process moves through:</p>
+            <p><strong>Initialize → Develop → Test → Build → Deploy → Monitor</strong></p>
+            <figure>
+                <img src="../Attachments/workflow.jpg"
+                    alt="TaskFlow development workflow from project initialization through deployment and monitoring"
+                    width="50%">
+                <figcaption>A typical TaskFlow development workflow.</figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section class="arch">
+            <h2>🏗️ Architecture</h2>
+            <p>TaskFlow connects common development operations through a unified command-line interface</p>
+            <p><strong>Developer → TaskFlow CLI → Development Tools → Backend Services → Database → Testing →
+                    Deployment</strong></p>
+            <figure>
+                <img src="../Attachments/architecture.jpg"
+                    alt="TaskFlow architecture showing the CLI connected to development and deployment components"
+                    width="50%">
+                <figcaption>TaskFlow connects common development operations through a unified command-line interface.
+                </figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section class="contributn">
+            <h2>🤝 Contributing</h2>
+            <p>TaskFlow is an open-source project, and contributions are welcome.</p>
+            <p><strong>Contributors are expected to:</strong></p>
+            <ul>
+                <li>Be respectful toward other contributors.</li>
+                <li>Provide clear descriptions when reporting issues.</li>
+                <li>Avoid submitting intentionally harmful or malicious code.</li>
+                <li>Test changes before submitting them.</li>
+                <li>Keep pull requests focused on a specific change.</li>
+                <li>Follow the project's coding and documentation standards.</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="contributn-workflow">
+            <h2>🛠️ Contribution Workflow</h2>
+            <p>Developers who want to contribute can clone the project repository, create a separate branch for their
+                changes, test their implementation locally, and submit a pull request for review.</p>
+            <p><strong>Example workflow:</strong></p>
+            <pre>
+git clone https://github.com/taskflow-cli/taskflow.git
+
+cd taskflow
+
+npm install
+
+npm test
+            </pre>
+            <p><strong>Create a feature branch:</strong></p>
+            <code>git checkout -b feature/task-search</code>
+            <p><strong>After making changes:</strong></p>
+            <pre>
+git add .
+git commit -m "Add task search functionality"
+git push origin feature/task-search
+            </pre>
+            <p># The project maintainers review submitted pull requests before merging them into the main branch.</p>
+        </section>
+        <hr>
+        <section class="contributn-req">
+            <h2>📋 Contribution Requirements</h2>
+            <ul>
+                <li>Node.js 20 or later</li>
+                <li>npm 10 or later</li>
+                <li>Git</li>
+                <li>Basic JavaScript knowledge</li>
+                <li>Familiarity with command-line tools</li>
+                <li>Ability to write and test basic unit tests</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="faq">
+            <h2>❓ Frequently Asked Questions</h2>
+            <details>
+                <summary>Is TaskFlow free?</summary>
+                <p>Yes. TaskFlow is distributed under the MIT License and can be used without a subscription.</p>
+            </details>
+            <details>
+                <summary>Does TaskFlow require an Internet connection?</summary>
+                <p>No. The core task-management features work completely offline</p>
+            </details>
+            <details>
+                <summary>Can I use TaskFlow on Windows?</summary>
+                <p>Yes. Windows 11 is currently supported.</p>
+            </details>
+            <details>
+                <summary>Can I synchronize tasks between computers?</summary>
+                <p>Not yet. Cloud synchronization is currently under development.</p>
+            </details>
+            <details>
+                <summary>Is TaskFlow suitable for teams?</summary>
+                <p>The current release is primarily designed for individual users. Team collaboration is planned for a
+                    future release.</p>
+            </details>
+            <details>
+                <summary>Can I contribute to the project?</summary>
+                <p>Yes. Contributions, bug reports, documentation improvements, and feature proposals are welcome.</p>
+            </details>
+        </section>
+        <hr>
+        <section class="project-roadmap">
+            <h2>🗺️ Project Roadmap</h2>
+            <h3>Phase 1 &mdash; Core CLI</h3>
+            <p><strong>Status:</strong> Completed</p>
+            <ul>
+                <li>Task creation</li>
+                <li>Task listing</li>
+                <li>Task completion</li>
+                <li>Local storage</li>
+            </ul>
+            <h3>Phase 2 &mdash; Productivity Features</h3>
+            <p><strong>Status:</strong> Completed</p>
+            <ul>
+                <li>Search</li>
+                <li>Filtering</li>
+                <li>Priorities</li>
+                <li>Keyboard shortcuts</li>
+            </ul>
+            <h3>Phase 3 &mdash; Cloud Features</h3>
+            <p><strong>Status:</strong> In Development</p>
+            <ul>
+                <li>Account system</li>
+                <li>Cloud synchronization</li>
+                <li>Backup</li>
+                <li>Multi-device access</li>
+            </ul>
+            <h3>Phase 4 &mdash; Collaboration</h3>
+            <p><strong>Status:</strong> Planned</p>
+            <ul>
+                <li>Shared workspaces</li>
+                <li>Team members</li>
+                <li>Assigned tasks</li>
+                <li>Team activity</li>
+            </ul>
+            <h3>Phase 5 &mdash; Mobile</h3>
+            <p><strong>Status:</strong> Planned</p>
+            <ul>
+                <li>Android application</li>
+                <li>iOS application</li>
+                <li>Mobile notifications</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="terminal-demo">
+            <h2>🖥️ TaskFlow Terminal Demo</h2>
+            <figure>
+                <img src="../Attachments/terminal-demo.jpg"
+                    alt="TaskFlow CLI displaying a task list in interactive terminal mode" width="50%">
+                <figcaption>TaskFlow CLI running in interactive terminal mode.</figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section class="imp-info">
+            <h2>⚠️ Important Project Information</h2>
+            <p><mark>TaskFlow CLI is currently a beta project.</mark></p>
+            <p>Users should expect occasional bugs, changes to command syntax, and incomplete features while the project
+                continues to evolve.</p>
+            <p><strong>The project does not currently provide:</strong></p>
+            <ul>
+                <li>Cloud synchronization</li>
+                <li>Account management</li>
+                <li>Team collaboration</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="contibuter-intro">
+            <h2>🎧 Contributor Introduction</h2>
+            <p>The TaskFlow team has created a short audio introduction for new contributors.</p>
+            <h3>TaskFlow Introduction</h3>
+            <p><strong>Duration:</strong> 45 seconds</p>
+            <p>The audio explains what TaskFlow is and how new contributors can get started.</p>
+            <h3>🎵 Audio Player</h3>
+            <audio controls preload="metadata">
+                <source src="../Attachments/taskflow-introduction.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+        <hr>
+        <section class="resources">
+            <h2>🔗 Project Resources</h2>
+            <h3>📚 Official Documentation</h3>
+            <a href="#">https://docs.taskflow.example</a>
+            <h3>💻 GitHub Repository</h3>
+            <a href="#">https://github.com/taskflow-cli/taskflow</a>
+            <h3>📦 Download TaskFlow v0.8.0</h3>
+            <a href="#">taskflow-0.8.0.zip</a>
+        </section>
+        <hr>
+        <section class="maintainers">
+            <h2>👥 Maintainers</h2>
+            <h3>Ritam Das</h3>
+            <p><strong>Role:</strong> Project Maintainer</p>
+            <p>Open-source maintainer and backend developer responsible for the TaskFlow CLI project.</p>
+            <h3>Sonu</h3>
+            <p><strong>Role:</strong> Community Manager</p>
+            <p>Responsible for documentation, community discussions, and contributor coordination.</p>
+        </section>
+        <hr>
+        <section class="contact">
+            <h2>📬 Contact</h2>
+            <h3>TaskFlow Community</h3>
+            <p><strong>General Email:</strong><a href="mailto:hello@taskflow.example">hello@taskflow.example</a></p>
+            <p><strong>Security Email:</strong><a href="mailto:security@taskflow.example">security@taskflow.example</a>
+            </p>
+            <p><strong>Documentation:</strong><a href="#">https://docs.taskflow.example</a></p>
+            <p><strong>Repository:</strong><a href="#">https://github.com/taskflow-cli/taskflow</a></p>
+        </section>
+        <hr>
+        <section class="others">
+            <h2>⚡ Build better workflows. One task at a time.</h2>
+            <p>TaskFlow CLI is built around a simple idea: your productivity tools should fit into your workflow rather
+                than forcing you to leave it.</p>
+            <p>The project is still growing, and community contributions will help determine what it becomes next.</p>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p><i>&copy; 2026 TaskFlow CLI Community</i></p>
+    </footer>
+</body>
+
+</html>

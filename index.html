@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="A collection of 10 progressively challenging HTML webpages created as part of my frontend development journey.">
+
+    <title>HTML Journey | Ritam Das</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background:
+                radial-gradient(circle at 15% 10%, rgba(249, 115, 22, 0.12), transparent 30%),
+                radial-gradient(circle at 85% 30%, rgba(30, 64, 175, 0.15), transparent 35%),
+                #050816;
+            color: #e5e7eb;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            background: rgba(3, 7, 18, 0.92);
+            border-bottom: 1px solid rgba(249, 115, 22, 0.25);
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #fb923c, #f97316, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #fb923c;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 10px 90px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #f8fafc;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #fb923c, #f97316, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: 0 auto 30px;
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn.secondary {
+            background: transparent;
+            border: 1px solid #334155;
+            color: #e2e8f0;
+            box-shadow: none;
+        }
+
+        .btn.secondary:hover {
+            border-color: #fb923c;
+            color: #fb923c;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #94a3b8;
+        }
+
+        .progress-box {
+            background: linear-gradient(145deg,
+                    rgba(15, 23, 42, 0.95),
+                    rgba(8, 15, 30, 0.95));
+            padding: 28px;
+            border-radius: 14px;
+            border: 1px solid #1e293b;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-weight: bold;
+            color: #f8fafc;
+        }
+
+        progress {
+            width: 100%;
+            height: 18px;
+            accent-color: #f97316;
+        }
+
+        .tasks {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .task-card {
+            background:
+                linear-gradient(145deg,
+                    rgba(15, 23, 42, 0.95),
+                    rgba(8, 15, 30, 0.95));
+            padding: 26px;
+            border-radius: 14px;
+            border: 1px solid #1e293b;
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .task-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(249, 115, 22, 0.55);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .task-number {
+            color: #fb923c;
+            font-weight: bold;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .task-card h3 {
+            color: #f8fafc;
+            margin: 8px 0 10px;
+        }
+
+        .task-card p {
+            color: #94a3b8;
+            margin-bottom: 18px;
+        }
+
+        .task-link {
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        .task-link:hover {
+            color: #fb923c;
+        }
+
+        .stack {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tag {
+            background: #0f172a;
+            border: 1px solid #334155;
+            color: #cbd5e1;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .tag:hover {
+            border-color: #f97316;
+            color: #fb923c;
+        }
+
+        .next {
+            text-align: center;
+            background:
+                linear-gradient(135deg,
+                    #111827 0%,
+                    #172554 55%,
+                    #431407 100%);
+            color: white;
+            padding: 55px 20px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .next h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .next p {
+            color: #cbd5e1;
+            margin: 10px auto 25px;
+            max-width: 600px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            background: #020617;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+        }
+
+        footer strong {
+            color: #f8fafc;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .tasks {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding-top: 40px;
+            }
+
+            .hero {
+                padding-top: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="top">
+        <nav>
+            <a href="#top" class="logo">🌐 HTML Journey</a>
+
+            <ul>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#concepts">Concepts</a></li>
+                <li><a href="#next">What's Next</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <h1>Building with <span>HTML</span></h1>
+
+            <p>
+                A collection of 10 progressively challenging webpages
+                created to build a strong foundation in webpage structure,
+                semantics, forms, navigation, multimedia, and HTML5.
+            </p>
+
+            <div class="buttons">
+                <a href="#tasks" class="btn">Explore Tasks ↓</a>
+                <a href="README.md" class="btn secondary">View README</a>
+            </div>
+
+        </section>
+
+        <!-- Progress -->
+        <section>
+
+            <div class="section-title">
+                <h2>📈 Journey Progress</h2>
+                <p>The HTML section is complete.</p>
+            </div>
+
+            <div class="progress-box">
+
+                <div class="progress-info">
+                    <span>10 / 10 Tasks Completed</span>
+                    <span>100%</span>
+                </div>
+
+                <progress value="10" max="10"></progress>
+
+            </div>
+
+        </section>
+
+        <!-- Tasks -->
+        <section id="tasks">
+
+            <div class="section-title">
+                <h2>📚 Webpage Collection</h2>
+                <p>10 webpages covering progressively broader HTML concepts.</p>
+            </div>
+
+            <div class="tasks">
+
+                <article class="task-card">
+                    <span class="task-number">TASK 01</span>
+                    <h3>📰 Tech Blog Article</h3>
+                    <p>A structured technology article focusing on fundamental webpage organization.</p>
+                    <a class="task-link" href="HTML-Tasks/01-Tech-Blog-Article.html">View Page →</a>
+                </article>
+
+                <article class="task-card">
+                    <span class="task-number">TASK 02</span>
+                    <h3>🎓 Student Course Registration</h3>
+                    <p>An academic registration page using structured information and forms.</p>
+                    <a class="task-link" href="HTML-Tasks/02-Student-Course-Registration.html">View Page →</a>
+                </article>
+
+                <article class="task-card">
+                    <span class="task-number">TASK 03</span>
+                    <h3>💼 Internship Application</h3>
+                    <p>An application form using multiple input types and form controls.</p>
+                    <a class="task-link" href="HTML-Tasks/03-Internship-Application-Form.html">View Page →</a>
+                </article>
+
+                <article class="task-card">
+                    <span class="task-number">TASK 04</span>
+                    <h3>🎤 Campus Tech Conference</h3>
+                    <p>A university conference webpage with navigation, schedules, speakers and events.</p>
+                    <a class="task-link" href="HTML-Tasks/04-Campus-Tech-Conference.html">View Page →</a>
+                </article>
+
+                <article class="task-card">
+                    <span class="task-number">TASK 05</span>
+                    <h3>🧑‍💻 Open Source Documentation</h3>
+                    <p>A documentation-style webpage organized around a software project.</p>
+                    <a class="task-link" href="HTML-Tasks/05-Open-Source-Project-Documentation.html">View Page →</a>
+                </article>
+
+                <article class="task-card">
+                    <span class="task-number">TASK 06</span>
+                    <h3>📊 Student Learning Dashboard</h3>
+                    <p>A large academic dashboard using tables, progress indicators and semantic structure.</p>
+                    <a class="task-link" href="HTML-Tasks/06-Student-Learning-Dashboard.html">View Page →</a>
+                </article>
+
+                <article class="task-card">
+                    <span class="task-number">TASK 07</span>
+                    <h3>📰 Tech Magazine</h3>
+                    <p>An editorial webpage combining technical content, multimedia and specialized HTML.</p>
+                    <a class="task-link" href="HTML-Tasks/07-Tech-Magazine-Article-Media-Review.html">View Page →</a>
+                </article>
+
+                <article class="task-card">
+                    <span class="task-number">TASK 08</span>
+                    <h3>🚀 TechFest 2026</h3>
+                    <p>A complete technology festival webpage with schedules, registration and navigation.</p>
+                    <a class="task-link" href="HTML-Tasks/08-TechFest-2026.html">View Page →</a>
+                </article>
+
+                <article class="task-card">
+                    <span class="task-number">TASK 09</span>
+                    <h3>🏥 MediCare Plus</h3>
+                    <p>A healthcare portal featuring appointment forms, doctors, services and FAQs.</p>
+                    <a class="task-link" href="HTML-Tasks/09-MediCare-Plus.html">View Page →</a>
+                </article>
+
+                <article class="task-card">
+                    <span class="task-number">TASK 10</span>
+                    <h3>💻 DevConnect</h3>
+                    <p>A developer community hub combining advanced HTML5 elements, media and embedded resources.</p>
+                    <a class="task-link" href="HTML-Tasks/10-DevConnect-Developer-Community-Hub.html">View Page →</a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Concepts -->
+        <section id="concepts">
+
+            <div class="section-title">
+                <h2>🧩 Concepts Practiced</h2>
+                <p>A quick overview of what this collection covers.</p>
+            </div>
+
+            <div class="stack">
+                <span class="tag">Semantic HTML</span>
+                <span class="tag">Forms</span>
+                <span class="tag">Tables</span>
+                <span class="tag">Navigation</span>
+                <span class="tag">In-page Links</span>
+                <span class="tag">Multimedia</span>
+                <span class="tag">HTML5</span>
+                <span class="tag">Interactive Elements</span>
+                <span class="tag">Embedded Content</span>
+                <span class="tag">Accessibility</span>
+            </div>
+
+        </section>
+
+        <!-- What's Next -->
+        <section id="next">
+
+            <div class="next">
+
+                <h2>🎨 What's Next?</h2>
+
+                <p>
+                    The next stage is focused on applying CSS to structured webpages
+                    and building progressively challenging mini projects.
+                </p>
+
+                <a href="#top" class="btn">Back to Top ↑</a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            <strong>🌐 HTML Journey</strong>
+        </p>
+
+        <p>
+            Built by Ritam Das • Learn → Practice → Build → Improve
+        </p>
+
+        <p>
+            © 2026 Ritam Das
+        </p>
+
+    </footer>
+
+    <script>
+        // Small interaction: update the page title while scrolling.
+        const originalTitle = document.title;
+
+        window.addEventListener("scroll", () => {
+            document.title = window.scrollY > 300
+                ? "HTML Journey | Exploring Tasks"
+                : originalTitle;
+        });
+    </script>
+
+</body>
+
+</html>

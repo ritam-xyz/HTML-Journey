@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Application Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>CodeForge Technologies</h1>
+        <h2>Software Engineering Internship — 2026</h2>
+        <p><b>Application deadline:</b> September 15, 2026</p>
+        <p>CodeForge Technologies is accepting applications for its six-month Software Engineering Internship Program.
+        </p>
+        <p>The internship is intended for students who want practical experience working on real software projects
+            alongside experienced engineers.</p>
+    </header>
+    <hr>
+    <main>
+        <section class="overview">
+            <h2>Internship Overview</h2>
+            <p><strong>Position:</strong> Software Engineering Intern</p>
+            <p><strong>Location:</strong> Bengaluru, India</p>
+            <p><strong>Work Mode:</strong> Hybrid</p>
+            <p><strong>Duration:</strong> 6 months</p>
+            <p><strong>Start Date:</strong> October 5, 2026</p>
+            <p><strong>Stipend:</strong> ₹25,000 per month</p>
+            <p><strong>Application Deadline:</strong> September 15, 2026</p>
+        </section>
+        <hr>
+        <section class="eligibilty">
+            <h2>Eligibilty</h2>
+            <p><strong>Applicants must satisfy the following requirements:</strong></p>
+            <ul>
+                <li>Currently enrolled in a Bachelor's or Master's degree in Computer Science, Information Technology,
+                    Software Engineering, or a related field.</li>
+                <li>Have completed at least two semesters of their degree.</li>
+                <li>Have basic programming experience in at least one programming language.</li>
+                <li>Be available for the complete six-month internship period.</li>
+                <li>Be legally eligible to undertake an internship in India.</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="app-form">
+            <h2>Internship Application</h2>
+            <form action="/server">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <br>
+                    <label for="f-name">Full Name: </label>
+                    <input type="text" name="f-name" id="f-name" required placeholder="type here...">
+                    <br><br>
+                    <label for="email">Email Address: </label>
+                    <input type="email" name="email" id="email" required placeholder="type here...">
+                    <br><br>
+                    <label for="phn">Phone Number: </label>
+                    <input type="tel" name="phn" id="phn" required placeholder="type here...">
+                    <br><br>
+                    <label for="dob">Date of Birth: </label>
+                    <input type="date" name="dob" id="dob">
+                    <br><br>
+                    <label for="gender">Gender: </label>
+                    <select name="gender" id="gender" required>
+                        <option selected>Select Your Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="not-to-say">Prefer Not to Say</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Address</legend>
+                    <br>
+                    <label for="strt-add">Street Address: </label>
+                    <input type="text" name="strt-add" id="strt-add" required placeholder="type here...">
+                    <br><br>
+                    <label for="city">City: </label>
+                    <input type="text" name="city" id="city" required placeholder="type here...">
+                    <br><br>
+                    <label for="state">State: </label>
+                    <select name="state" id="state" required>
+                        <option disabled selected>Select Your State</option>
+                        <option value="west-bengal">West Bengal</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="karnataka">Karnataka</option>
+                        <option value="tamil-nadu">Tamil Nadu</option>
+                        <option value="telangana">Telangana</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="uttar-pradesh">Uttar Pradesh</option>
+                        <option value="other">Other</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Academic Information</legend>
+                    <br>
+                    <label for="col-uni">College / University Name: </label>
+                    <input type="text" name="col-uni" id="col-uni" required placeholder="type here...">
+                    <br><br>
+                    <label for="degree">Degree</label>
+                    <select id="degree" name="degree" required>
+                        <option value="" disabled selected>-- Select Options --</option>
+                        <option value="btech">B.Tech</option>
+                        <option value="be">B.E.</option>
+                        <option value="bsc">B.Sc.</option>
+                        <option value="bca">BCA</option>
+                        <option value="mtech">M.Tech</option>
+                        <option value="me">M.E.</option>
+                        <option value="mca">MCA</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br><br>
+                    <label for="branch">Branch / Major: </label>
+                    <input type="text" name="branch" id="branch" placeholder="CSE/....">
+                    <p><i>//Example: Computer Science and Engineering</i></p>
+                    <label for="semester">Current Semeste: </label>
+                    <select id="semester" name="semester" required>
+                        <option value="" disabled selected>-- Select Semester --</option>
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                    <br><br>
+                    <label for="grad-year">Expected Graduation Year: </label>
+                    <select id="grad-year" name="gradYear" required>
+                        <option value="" disabled selected>-- Select Year --</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Technical Skills</legend>
+                    <p><strong>Select the technologies you are comfortable working with.</strong></p>
+                    <fieldset>
+                        <legend><strong>Programming Languages</strong></legend>
+                        <label><input type="checkbox" name="languages" value="c"> C</label><br>
+                        <label><input type="checkbox" name="languages" value="cpp"> C++</label><br>
+                        <label><input type="checkbox" name="languages" value="java"> Java</label><br>
+                        <label><input type="checkbox" name="languages" value="python"> Python</label><br>
+                        <label><input type="checkbox" name="languages" value="javascript"> JavaScript</label><br>
+                        <label><input type="checkbox" name="languages" value="go"> Go</label><br>
+                        <label><input type="checkbox" name="languages" value="rust"> Rust</label>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend><strong>Web Technologies</strong></legend>
+                        <label><input type="checkbox" name="webTech" value="html"> HTML</label><br>
+                        <label><input type="checkbox" name="webTech" value="css"> CSS</label><br>
+                        <label><input type="checkbox" name="webTech" value="react"> React</label><br>
+                        <label><input type="checkbox" name="webTech" value="nodejs"> Node.js</label><br>
+                        <label><input type="checkbox" name="webTech" value="express"> Express.js</label>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend><strong>Databases</strong></legend>
+                        <label><input type="checkbox" name="databases" value="mysql"> MySQL</label><br>
+                        <label><input type="checkbox" name="databases" value="postgresql"> PostgreSQL</label><br>
+                        <label><input type="checkbox" name="databases" value="mongodb"> MongoDB</label><br>
+                        <label><input type="checkbox" name="databases" value="sqlite"> SQLite</label>
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <legend><strong>Experience Level</strong></legend>
+                    <p>Select your current experience level:</p>
+                    <input type="radio" id="beginner" name="level" value="beginner">
+                    <label for="beginner">Beginner</label><br>
+                    <input type="radio" id="intermediate" name="level" value="intermediate">
+                    <label for="intermediate">Intermediate</label><br>
+                    <input type="radio" id="advanced" name="level" value="advanced">
+                    <label for="advanced">Advanced</label><br>
+                </fieldset>
+                <fieldset>
+                    <legend><strong>Preferred Work Mode</strong></legend>
+                    <label><input type="radio" name="workMode" value="onsite" required> On-site</label><br>
+                    <label><input type="radio" name="workMode" value="hybrid"> Hybrid</label><br>
+                    <label><input type="radio" name="workMode" value="remote"> Remote</label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend><strong>Internship Preferences</strong></legend>
+                    <br>
+                    <fieldset>
+                        <legend><strong>Preferred Internship Area</strong></legend>
+                        <label><input type="checkbox" name="internshipArea" value="frontend"> Frontend
+                            Development</label><br>
+                        <label><input type="checkbox" name="internshipArea" value="backend"> Backend
+                            Development</label><br>
+                        <label><input type="checkbox" name="internshipArea" value="fullstack"> Full-Stack
+                            Development</label><br>
+                        <label><input type="checkbox" name="internshipArea" value="mobile"> Mobile
+                            Development</label><br>
+                        <label><input type="checkbox" name="internshipArea" value="devops"> DevOps</label><br>
+                        <label><input type="checkbox" name="internshipArea" value="testing"> Software Testing</label>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend><strong>Are you available for the full six-month internship?</strong></legend>
+                        <label><input type="radio" name="fullSixMonths" value="yes" required> Yes</label><br>
+                        <label><input type="radio" name="fullSixMonths" value="no"> No</label>
+                    </fieldset>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend><strong>Portfolio and Profiles</strong></legend>
+                    <br>
+                    <label for="github">GitHub Profile: </label>
+                    <input type="url" name="github" id="github"
+                        placeholder="eg: https://github.com/example-user"><br><br>
+                    <label for="linkedin">LinkedIn Profile: </label>
+                    <input type="url" name="linkedin" id="linkedin"
+                        placeholder="eg: https://linkedin.com/example-user"><br><br>
+                    <label for="portfolio">Portfolio Website: </label>
+                    <input type="url" name="portfolio" id="portfolio" placeholder="eg: https://example.dev"><br><br>
+                    <label for="resume">Resume: </label>
+                    <input type="file" name="resume" id="resume" accept=".pdf,application/pdf" required>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend><strong>Additional Information</strong></legend>
+                    <br>
+                    <label for="why-cf">Why do you want to join CodeForge Technologies?</label><br>
+                    <textarea name="why-cf" id="why-cf" placeholder="type here..." maxlength="500"></textarea>
+                    <br>
+                    <label for="referral-source"><strong>How did you hear about this internship?</strong></label><br>
+                    <select id="referral-source" name="referralSource" required>
+                        <option value="" disabled selected>-- Select Options --</option>
+                        <option value="company-website">Company Website</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="college-placement">College Placement Cell</option>
+                        <option value="friend-referral">Friend or Referral</option>
+                        <option value="job-portal">Job Portal</option>
+                        <option value="social-media">Social Media</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br><br>
+                    <fieldset>
+                        <legend><strong>Do you have previous internship experience?</strong></legend>
+                        <label><input type="radio" name="hasExperience" value="yes" required> Yes</label><br>
+                        <label><input type="radio" name="hasExperience" value="no"> No</label>
+                        <br><br>
+                        <label for="experience-details">
+                            <strong>If yes:</strong><i>Previous Internship Details</i>
+                        </label><br><br>
+                        <textarea id="experience-details" name="experienceDetails"
+                            placeholder="Describe your previous experience..." rows="4" cols="50"></textarea>
+                    </fieldset>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="declarationAccuracy" required>
+                        I confirm that the information provided in this application is accurate and complete to the best
+                        of my knowledge.
+                    </label>
+
+                    <br><br>
+                    <label>
+                        <input type="checkbox" name="declarationConsequences" required>
+                        I understand that providing false information may result in the rejection of my application or
+                        termination of the internship.
+                    </label>
+                    <br>
+                    <h3>Applicant Agreement</h3>
+                    <label>
+                        <input type="checkbox" name="applicantAgreement" required>
+                        The applicant must confirm that they have read and agree to the declaration before submitting
+                        the application.
+                    </label>
+                    <br><br>
+                    <button type="submit">Submit Application</button>
+                    <button type="reset">Reset</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

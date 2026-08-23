@@ -14,7 +14,7 @@
 ## 🌐 Live Demo
 
 🔗 **Explore the HTML Journey:**  
-[**View Live Website →**](YOUR-LIVE-DEMO-LINK)
+[**View Live Website →**](https://ritam-xyz.github.io/HTML-Journey/)
 
 > 🚧 The live preview showcases the repository structure, learning tasks, and practical HTML exercises.
 
